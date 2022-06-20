@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import * as Style from './style.js';
+import { PieChart } from './Components/PieChart/index.js';
+import {BarChart} from './Components/BarChart/index.js';
+import { AreaChart } from './Components/AreaChart/index.js';
+import { CandlestickChart } from './Components/CandlestickChart/index.js';
+import { LineChart } from './Components/LineChart/index.js';
+import { GeoChart } from './Components/GeoChart/index.js';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Style.Container>
+      <PieChart/>
+      <BarChart/>
+      <AreaChart/>
+      <CandlestickChart/>
+      <LineChart/>
+      <GeoChart/>
+    </Style.Container>
   );
 }
 
